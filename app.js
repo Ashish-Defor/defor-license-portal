@@ -4,7 +4,7 @@ const state = document.querySelector('#connection-state');
 for (const link of document.querySelectorAll('[data-path]')) link.addEventListener('click', event => { if (link.getAttribute('aria-disabled') === 'true') event.preventDefault(); });
 async function configure() {
   try {
-    const response = await fetch('./config.json', { cache: 'no-store' });
+    const response = await fetch('./config.json?v=free-v1', { cache: 'no-store' });
     if (!response.ok) throw new Error('Configuration unavailable');
     const config = await response.json();
     if (config.service_mode === 'firebase') {
