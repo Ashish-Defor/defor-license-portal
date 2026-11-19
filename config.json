@@ -1,1 +1,5 @@
-{ "service_url": null }
+{
+  "service_mode": "firebase",
+  "management_url": "https://defor-cad-access-ashish.web.app/",
+  "service_url": null
+}
